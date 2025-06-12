@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import '../css/Nav.css';
 import CarWidget from './CarWidget';
+import { NavLink } from 'react-router-dom';
 
     const NavBar = () => {
     const [mostrarMenu, setMostrarMenu] = useState(false);
@@ -12,22 +13,22 @@ import CarWidget from './CarWidget';
     return (
         <nav className="navbar">
         <ul className="navbar__links">
-            <li><a href="">Inicio</a></li>
-            <li><a href="">Contacto</a></li>
+            <li><NavLink to="/">Inicio</NavLink></li>
+            <li><NavLink to="">Contacto</NavLink></li>
 
             <li className="navbar__item--dropdown">
-            <a href="#" onClick={toggleMenu}>Productos</a>
+            <NavLink to="#" onClick={toggleMenu}>Productos</NavLink>
             {mostrarMenu && (
                 <ul className="navbar__submenu">
-                <li><a href="">Jarrones</a></li>
-                <li><a href="">Masetas</a></li>
-                <li><a href="">Porta Sahumerios</a></li>
-                <li><a href="">Velas</a></li>
+                <li><NavLink to="category/Yeso">Yeso</NavLink></li>
+                <li><NavLink to="category/Velas">Velas</NavLink></li>
+                <li><NavLink to="category/Aromatizantes">Aromatizantes</NavLink></li>
+                <li><NavLink to="category/Hogar Deco">Hogar Deco</NavLink></li>
                 </ul>
             )}
             </li>
 
-            <li><a href="">Sobre Nosotros</a></li>
+            <li><NavLink to="">Sobre Nosotros</NavLink></li>
             <li><CarWidget /></li>
         </ul>
         </nav>

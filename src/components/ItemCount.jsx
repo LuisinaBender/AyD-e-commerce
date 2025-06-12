@@ -1,18 +1,27 @@
 import React, { useState, useEffect } from 'react'
 
-const ItemCount = () => {
+const ItemCount = ({stock, onAdd}) => {
     const [count, setCount] =useState(1)
     const [compra, setCompra]= useState(false)
     const sumar = ()=>{
-        
-        setCount(count +1)
+        if(count < stock){
+
+            setCount(count +1)
+        }
     }
     const restar = ()=>{
         setCount(count -1)
     }
     const comprarItem = () => {
-        setCompra(!compra)
+        if(count > 0){
+
+            setCount(count -1)
+        }
     }
+    const comprar = () =>{
+    onAdd(count)
+}
+
     //Es el mas usado
         useEffect(()=>{
         console.log('Con el array de dependencias vacio, me ejecuto UNA VEZ')
@@ -25,7 +34,7 @@ const ItemCount = () => {
         <span className='btn'>{count}</span>
         <button className='btn btn-success' onClick={sumar}>+</button>
     </div>
-    <button className='btn btn-primary' onClick={comprarItem}>Comprar</button>
+    <button className='btn btn-primary' disabled={stock === 0 }onClick={()=>onAdd}>Comprar</button>
     </div>
     )
 }

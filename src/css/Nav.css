@@ -14,7 +14,7 @@
     position: absolute;  /* saca el submenu del flujo normal */
     top: 100%;           /* justo debajo del li padre */
     left: 0;
-    background-color: #334557;
+    background-color: #b27c3e;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -32,13 +32,13 @@
     }
 
 .navbar__submenu li a:hover {
-    background-color: #61dafb;
-    color: #334557;
+    background-color: #553c26;
+    color: #fff;
     border-radius: 0;
     }
 
 .navbar {
-    background-color: #334557;
+    background-color: #b27c3e;
     padding: 8px;
     display: flex;
     list-style: none;
@@ -59,7 +59,7 @@
 }
 
 .navbar a:hover {
-    color: #61dafb;
+    color: #553c26;
     border-radius: 20px;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .carWidget:hover {
-    color: #61dafb; 
+    color: #553c26; 
 }
 
 .notificacion {

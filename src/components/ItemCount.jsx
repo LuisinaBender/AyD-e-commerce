@@ -13,25 +13,10 @@ const ItemCount = () => {
     const comprarItem = () => {
         setCompra(!compra)
     }
-    //No se recomienda 
-    useEffect(()=>{
-        console.log('Sin el array de dependencias me ejecuto SIEMPRE')
-    })
     //Es el mas usado
         useEffect(()=>{
         console.log('Con el array de dependencias vacio, me ejecuto UNA VEZ')
     },[])
-    //Se usa en casos especificos
-        useEffect(()=>{
-        console.log('Con el array de dependencias con datos, me ejecuto cuando se monta el componente y cada vez que lo que esta escuchando se actualice')
-    },[compra])
-    
-    console.log('soy item count')
-     //No se recomienda 
-    useEffect(()=>{
-        console.log('Sin el array de dependencias me ejecuto SIEMPRE')
-    })
-
 
     return (
     <div>

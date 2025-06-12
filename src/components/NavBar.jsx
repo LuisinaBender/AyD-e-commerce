@@ -19,21 +19,15 @@ import CarWidget from './CarWidget';
             <a href="#" onClick={toggleMenu}>Productos</a>
             {mostrarMenu && (
                 <ul className="navbar__submenu">
-                <li><a href="">Alternador</a></li>
-                <li><a href="">Bobina de Arranque</a></li>
-                <li><a href="">Bobina de Ignicion</a></li>
-                <li><a href="">Inyectores</a></li>
-                <li><a href="">Motor de Arranque</a></li>
-                <li><a href="">Polea de Alternador</a></li>
-                <li><a href="">Sensor ABS</a></li>
-                <li><a href="">Selenoide de Pare</a></li>
-                <li><a href="">Tapas de Moldes de Combustible</a></li>
-
+                <li><a href="">Jarrones</a></li>
+                <li><a href="">Masetas</a></li>
+                <li><a href="">Porta Sahumerios</a></li>
+                <li><a href="">Velas</a></li>
                 </ul>
             )}
             </li>
 
-            <li><a href="">Puntos de Ventas</a></li>
+            <li><a href="">Sobre Nosotros</a></li>
             <li><CarWidget /></li>
         </ul>
         </nav>

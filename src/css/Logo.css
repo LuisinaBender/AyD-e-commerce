@@ -3,4 +3,9 @@
     max-width: 900px;
     margin: 0 auto;
     padding-top: 50px;
+    padding-bottom: 20px;
 }
+
+.logo-container {
+    background-color: #fff8f0;
+} 

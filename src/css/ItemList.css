@@ -1,0 +1,63 @@
+.item-list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    
+}
+
+/* Tarjeta de producto */
+.product-card {
+    width: 250px;
+    height: 400px;
+    background-color: #fff8f0;
+    border: 2px solid #b27c3e;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.product-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+}
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid #b27c3e;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #553c26;
+    margin: 0.5rem 0;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #7a5a3a;
+    margin-bottom: 1rem;
+}
+
+/* Botón personalizado */
+.product-btn {
+    background-color: #b27c3e;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.product-btn:hover {
+    background-color: #553c26;
+}

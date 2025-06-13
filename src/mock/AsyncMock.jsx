@@ -22,7 +22,7 @@ const products = [
 
     {
         id: '3',
-        name: 'Hechizo de amor Diosa Ainé',
+        name: 'Hechizo de amor',
         description: 'Aroma de Vainilla con toques de canela y miel, ideal para atraer el amor y la pasión.',
         stock: 0,
         price: 3000,

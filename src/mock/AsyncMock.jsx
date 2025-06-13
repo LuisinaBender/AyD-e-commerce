@@ -1,22 +1,22 @@
 const products = [
     {
         id: '1',
-        name: 'Frasco',
+        name: 'Florero de yeso',
         description: 'Frasco de yeso con un diseño elegante, ideal para decoración y almacenamiento.',
         stock: 10,
         price: 2500,
         category: 'Yeso',
-        img: 'https://picsum.photos/200',
+        img: '/img/yeso1.jpg',
     }, 
     
     {
         id: '2',
-        name: 'Masetas',
+        name: 'Macetas',
         description: 'Ideal para suculentasy cactus, con un diseño moderno y elegante.',
         stock: 5,
         price: 1500,
         category: 'Yeso',
-        img: 'https://picsum.photos/450',
+        img: '/img/yeso2.jpg',
     }, 
 
 
@@ -27,7 +27,7 @@ const products = [
         stock: 0,
         price: 3000,
         category: 'Velas',
-        img: 'https://picsum.photos/800',
+        img: '/img/vela1.jpg',
     },
 
     {
@@ -37,17 +37,17 @@ const products = [
         stock: 20,
         price: 5000,
         category: 'Hogar Deco',
-        img: 'https://picsum.photos/600',
+        img: '/img/camino.jpg',
     }, 
 
     {
         id: '5',
-        name: 'Cojín decorativo',
+        name: 'Jarrones ',
         description: 'Cojín de terciopelo con un diseño moderno y elegante, ideal para decorar tu hogar.',
         stock: 15,
         price: 3500,
         category: 'Hogar Deco',
-        img: 'https://picsum.photos/700',
+        img: '/img/yeso3.jpg',
     }, 
 
     {
@@ -57,36 +57,36 @@ const products = [
         stock: 8,
         price: 4000,
         category: 'Velas',
-        img: 'https://picsum.photos/500',
+        img: '/img/vela2.jpeg',
     },
 
     {
         id: '7',
-        name: 'Jarrón de cerámica',
+        name: 'Niña ',
         description: 'Jarrón de cerámica con un diseño moderno y elegante, ideal para decorar tu hogar.',
         stock: 12,
         price: 6000,
         category: 'Hogar Deco',
-        img: 'https://picsum.photos/300',
+        img: '/img/yeso6.jpg',
     }, 
 
     {
         id: '8',
-        name: 'Set de macetas colgantes',
-        description: 'Set de 3 macetas colgantes con un diseño moderno y elegante, ideal para decorar tu hogar.',
+        name: 'Cascada de Humo',
+        description: 'Cascada de humo de cerámica con un diseño elegante, ideal para crear un ambiente relajante.',
         stock: 10,
         price: 4500,
         category: 'Yeso',
-        img: 'https://picsum.photos/400',
+        img: '/img/yeso4.jpg',
     },
     {
         id: '9',
-        name: 'Candelabro de hierro',
-        description: 'Candelabro de hierro con un diseño moderno y elegante, ideal para decorar tu hogar.',
+        name: 'Porta Sahumerio',
+        description: 'Porta sahumerio de yeso con un diseño moderno y elegante, ideal para decorar tu hogar.',
         stock: 7,
         price: 7000,
         category: 'Hogar Deco',
-        img: 'https://picsum.photos/200',
+        img: '/img/yeso5.jpg',
     }, 
 
     {
@@ -95,8 +95,8 @@ const products = [
         description: 'Set de 3 aromatizadores con diferentes aromas, ideal para crear un ambiente relajante.',
         stock: 5,
         price: 3500,
-        category: 'Velas',
-        img: 'https://picsum.photos/100',
+        category: 'Aromatizantes',
+        img: '/img/aromatizador2.jpeg',
     },
 
     {
@@ -106,7 +106,7 @@ const products = [
         stock: 6, 
         price: 2000,
         category: 'Aromatizantes',  
-        img: 'https://picsum.photos/250',
+        img: '/img/aromatizador1.jpg',
     },
 
 

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import '../css/ItemCount.css'
 
 const ItemCount = ({stock, onAdd}) => {
     const [count, setCount] =useState(1)
@@ -28,14 +29,15 @@ const ItemCount = ({stock, onAdd}) => {
     },[])
 
     return (
-    <div>
-        <div>
-        <button className='btn btn-danger' onClick={restar}>-</button>
-        <span className='btn'>{count}</span>
-        <button className='btn btn-success' onClick={sumar}>+</button>
+    <div className="counter-container">
+            <div className="counter-controls">
+                <button className="btn_restar" onClick={restar}>-</button>
+                <span className="btn_count">{count}</span>
+                <button className="btn_sumar" onClick={sumar}>+</button>
+            </div>
+    <button className="btn_comprar" disabled={stock === 0} onClick={() => onAdd(count)}>Comprar</button>
     </div>
-    <button className='btn btn-primary' disabled={stock === 0 }onClick={()=>onAdd}>Comprar</button>
-    </div>
+
     )
 }
 export default ItemCount

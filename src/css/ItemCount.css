@@ -1,0 +1,64 @@
+/* Contenedor del contador */
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Controles de suma/resta */
+.counter-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+/* Botones de sumar/restar */
+.btn_restar,
+.btn_sumar {
+    background-color: #b27c3e;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_restar:hover,
+.btn_sumar:hover {
+    background-color: #553c26;
+}
+
+/* Cantidad mostrada */
+.btn_count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #553c26;
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Botón de comprar */
+.btn_comprar {
+    background-color: #b27c3e;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn_comprar:hover:enabled {
+    background-color: #553c26;
+}
+
+/* Estado deshabilitado */
+.btn_comprar:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

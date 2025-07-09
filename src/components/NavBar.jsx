@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import '../css/Nav.css';
-import CarWidget from './CarWidget';
+import CarWidget from './CartWidget';
 import { NavLink } from 'react-router-dom';
 
     const NavBar = () => {

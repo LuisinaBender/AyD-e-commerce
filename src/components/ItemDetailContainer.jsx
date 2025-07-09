@@ -1,32 +1,27 @@
-import React from 'react'
-import { useState, useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
+import { getOneProduct, getProducts } from '../mock/AsyncMock'
 import ItemDetail from './ItemDetail'
-import { getProducts, getOneProduct } from '../mock/AsyncMock'
 import { useParams } from 'react-router-dom'
+import LoaderComponent from './LoaderComponent'
 
 const ItemDetailContainer = () => {
-    const [detail, setDetail] = useState(null)
-    const { id } = useParams()
-    const [loading, setLoading] = useState(true)
+    const [detail, setDetail] =useState({})
+    const [cargando, setCargando]= useState(false)
+    const {id} = useParams()
 
-    useEffect(() => {
-        setLoading(true)
-        getOneProduct(id)
-            .then(res => setDetail(res))
-            .catch(error => console.log(error))
-            .finally(() => setLoading(false))
-    }, [id]) 
-
-    if (loading) {
-        return <p>Cargando producto...</p>
-    }
-
-    if (!detail) {
-        return <p>No se encontró el producto</p>
-    }
+    useEffect(()=>{
+        setCargando(true)
+            getOneProduct(id)
+            .then((res)=> setDetail(res))
+            .catch((error)=> console.log(error))
+            .finally(()=> setCargando(false))
+        },[])
 
     return (
-        <ItemDetail detail={detail} />
+        <>
+        {cargando ? <LoaderComponent/> : <ItemDetail detail={detail}/>}
+        </>
     )
 }
+
 export default ItemDetailContainer

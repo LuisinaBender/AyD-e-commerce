@@ -3,6 +3,7 @@ import '../css/ItemDetail.css'
 import React, {useContext} from 'react'
 import { CartContext } from '../context/CartContext'
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -25,7 +26,7 @@ const ItemDetail = ({ detail }) => {
             <p className="item-detail-text">Categoría: {detail.category}</p>
             <p className="item-detail-text">Stock disponible: {detail.stock}</p>
             {
-                purchase ? <link className='btn btn-success' to='/cart'>Ir al carrito</link> : <ItemCount stock={detail.stock} onAdd={onAdd} />
+                purchase ? <Link className='btn btn-success' to='/cart'>Ir al carrito</Link> : <ItemCount stock={detail.stock} onAdd={onAdd} />
             }
         </div>
     )

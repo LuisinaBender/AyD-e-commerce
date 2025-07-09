@@ -1,13 +1,21 @@
 import React from 'react'
+import EmpyCart from './EmpyCart';
+import CartView from './CartView';
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const CartContainer = () => {
-  return (
-    <div>
-      
-    </div>
-  )
-}
+  const { cart } = useContext(CartContext);
 
-export default CartContainer
+  const cartIsEmpty = cart.reduce((acc, item) => acc + item.cantidad, 0) === 0;
+
+  return (
+    <>
+      {cartIsEmpty ? <EmpyCart /> : <CartView />}
+    </>
+  );
+};
+
+export default CartContainer;
 
 

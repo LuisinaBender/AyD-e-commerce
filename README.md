@@ -4,7 +4,7 @@
 Este proyecto consiste en una tienda online dedicada a la venta de productos artesanales, como velas, figuras de yeso, caminos de mesa y otros artículos decorativos.
 
 
-![Logo](../AyD-e-commerce/src/assets/logo.png)
+![Logo](/src/assets/logo.png)
 
 
 ## Installation 🚀

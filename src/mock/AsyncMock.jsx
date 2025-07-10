@@ -1,6 +1,6 @@
 const products = [
     {
-        id: '1',
+        id: '1', //no lo subo a firebase
         name: 'Florero de yeso',
         description: 'Frasco de yeso con un diseño elegante, ideal para decoración y almacenamiento.',
         stock: 10,

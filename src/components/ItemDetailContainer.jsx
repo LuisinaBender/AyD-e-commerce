@@ -3,19 +3,30 @@ import { getOneProduct, getProducts } from '../mock/AsyncMock'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import LoaderComponent from './LoaderComponent'
+import { collection } from 'firebase/firestore'
 
 const ItemDetailContainer = () => {
     const [detail, setDetail] =useState({})
     const [cargando, setCargando]= useState(false)
     const {id} = useParams()
 
+
     useEffect(()=>{
         setCargando(true)
-            getOneProduct(id)
-            .then((res)=> setDetail(res))
-            .catch((error)=> console.log(error))
-            .finally(()=> setCargando(false))
-        },[])
+
+        const productsCollection = collection(dataBase, 'products')
+        const docRef = doc(productsCollection, id)
+        getDoc(docRef)
+        .then((res)=>{
+            if(res.data()){
+                setDetail({id: res.id, ...res.data()})
+            }else{
+                setInvalid(true)
+            }
+        })
+        .catch((error)=> console.log(error))
+        .finally(()=> setCargando(false))
+    }, [])
 
     return (
         <>

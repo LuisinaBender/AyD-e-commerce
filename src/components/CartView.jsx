@@ -1,10 +1,11 @@
 import React from 'react'
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { Link } from 'react-router-dom';
 
 const CartView = () => {
 
-  const {cart, clear, removeItem} = useContext(CartContext);
+  const {cart, clear, removeItem, cartTotal} = useContext(CartContext);
   return (
     <div>
       <h2>Tu carrito de compras</h2>
@@ -19,7 +20,7 @@ const CartView = () => {
                     <p>Precio: ${compra.price}</p>
                     <p>Cantidad: {compra.quantity}</p>
                     <button onClick={() => removeItem(compra.id)}>Eliminar</button>
-                    <p>Subtotal: ${compra.price * compra.quantity},00</p>
+                    
 
                 </div>
                 ))
@@ -30,15 +31,13 @@ const CartView = () => {
         <button onClick={() => alert('Compra realizada!')}>Finalizar compra</button>
         </div>
       <div className="cart-total">
-        <h3>Total: ${cart.reduce((acc, item) => acc + item.price * item.quantity, 0)},00</h3>
+        <h3>Total: ${cartTotal},00</h3>
+        <div style={{display:'flex', justifyContent:'space-between', alignItems:'center',       width:'80%', padding:'2rem'}}>
+            <button className='btn btn-danger' onClick={clear}> Vaciar carrito</button>
+            <Link className='btn btn-success'to = '/checkout'>Terminar Compra</Link>
         </div>
-      <div className="cart-empty">
-        {cart.length === 0 && <p>Tu carrito está vacío. Agrega productos para comenzar a comprar.</p>}
         </div>
-      <div className="cart-clear">
-        {cart.length > 0 && <button onClick={clear}>Vaciar carrito</button>}
-        </div>
-
+      
     </div>
   )
 }

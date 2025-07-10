@@ -4,7 +4,9 @@ import ItemList from "./ItemList"
 import { useParams } from "react-router-dom"
 import LoaderComponent from "./LoaderComponent"
 import { collection, getDocs } from "firebase/firestore"
-import { dataBase } from "../service/firebase"
+import { dataBase } from "../services/firebase"
+import { query } from "firebase/firestore";
+import { where } from "firebase/firestore"
 
 
 const ItemListContainer = (props) => {

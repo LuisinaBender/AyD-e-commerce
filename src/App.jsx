@@ -7,8 +7,8 @@ import ErrorPage from './components/ErrorPage';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import { CartProvider } from './context/CartContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import CardContainer from './components/CartContainer';
 import CartContainer from './components/CartContainer';
+import CheckoutHook from './components/CheckoutHook';
 
 
 
@@ -23,6 +23,7 @@ function App() {
           <Route path='/item/:id' element={<ItemDetailContainer/>}/>
           <Route path='/category/:categoryId' element={<ItemListContainer/>} />
           <Route path="/cart" element={<CartContainer/>} />
+          <Route path='/checkout' element={<CheckoutHook/>} />
           <Route path='/*' element={<ErrorPage />} />
         </Routes>
       </CartProvider>

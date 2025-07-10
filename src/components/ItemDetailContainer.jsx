@@ -1,9 +1,12 @@
 import React, { useEffect, useState } from 'react'
-import { getOneProduct, getProducts } from '../mock/AsyncMock'
+import { getOneProduct, getProducts, products } from '../mock/AsyncMock'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
 import LoaderComponent from './LoaderComponent'
-import { collection } from 'firebase/firestore'
+import { addDoc, collection } from 'firebase/firestore'
+import { doc, getDoc } from 'firebase/firestore'
+import { dataBase } from "../services/firebase";
+
 
 const ItemDetailContainer = () => {
     const [detail, setDetail] =useState({})
@@ -28,8 +31,14 @@ const ItemDetailContainer = () => {
         .finally(()=> setCargando(false))
     }, [])
 
+    const subirData = () => {
+        console.log('Click')
+        const collectionProducts = collection(dataBase, 'products')
+        products.map((prod) => addDoc(collectionProducts, prod))
+    }
     return (
         <>
+            <button onClick={subirData}>Subir Productos</button>
         {cargando ? <LoaderComponent/> : <ItemDetail detail={detail}/>}
         </>
     )

@@ -41,7 +41,7 @@
 
     .navbar__links li a:hover {
     color: #553c26;
-    border-radius: 15px;
+
 }
 
     /* Dropdown */
@@ -88,35 +88,89 @@
     color: #553c26;
 }
 
-/* ✅ RESPONSIVE */
+/* Navbar general */
 @media (max-width: 768px) {
-    .navbar__toggle {
-        display: block;
-}
-
 .navbar__links {
     flex-direction: column;
-    position: absolute;
+    position: fixed; /* que quede fijo y ocupe toda la altura */
     top: 60px;
-    left:0;
-    
-    width: 100%;
+    left: 0;
+    width: 100%; /* ancho completo */
+    height: 40vh; /* ocupa la mitad de la pantalla */
     background-color: #b27c3e;
+    padding-top: 20px;
+    overflow-y: auto; /* para scroll si hay mucho contenido */
     display: none;
-    gap: 0 ;
-    max-width: 40%;
-    padding: 10px 0;
-    padding-left: 25px;
+    gap: 0;
+    z-index: 999;
 }
 
 .navbar__links.active {
     display: flex;
 }
 
-.carWidget {
-    align-self: flex-end;
-    margin-right: 20px;
+.navbar__links li {
+    width: 100%;
 }
 
+.navbar__links li a {
+    font-size: 1.3rem;
+    padding: 16px 20px;
+    display: block;
+    color: white;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
+
+.navbar__links li a:hover {
+    background-color: #553c26;
+    border-radius: 0;
+    color: #fff;
+}
+
+  /* Dropdown styles */
+.navbar__item--dropdown {
+    width: 100%;
+}
+
+  /* Ocultamos el dropdown por defecto */
+.navbar__submenu {
+    display: none;
+    flex-direction: column;
+    background-color: #a97e3a; /* tono más oscuro */
+    padding-left: 15px;
+}
+
+  /* Dropdown activo (cuando mostrarMenu == true) */
+.navbar__item--dropdown.active .navbar__submenu {
+    display: flex;
+}
+
+.navbar__submenu li a {
+    padding: 12px 20px;
+    font-size: 1.1rem;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+}
+
+.navbar__submenu li a:hover {
+    background-color: #553c26;
+}
+
+  /* Indicador flecha para dropdown */
+.navbar__item--dropdown > a::after {
+    content: " ▼";
+    font-size: 0.7rem;
+    float: right;
+    margin-right: 10px;
+}
+
+  /* Mostrar hamburguesa */
+.navbar__toggle {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+}
+
 

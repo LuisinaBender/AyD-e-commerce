@@ -33,6 +33,8 @@ Si desea el proyecto online, puede ingresar al siguiente link [linkk]()
 
 - ⚙️ [React hook form](https://react-hook-form.com) Utilizado para gestionar formularios
 
+- ✨ [Animate.css](https://animate.style) Para agregar animaciones simples y elegantes a componentes y alertas.
+
 
 👩‍💻 Desarrollado por Luisina Bender 🛡️⚔️  
 

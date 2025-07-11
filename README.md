@@ -35,6 +35,7 @@ Si desea el proyecto online, puede ingresar al siguiente link [https://ay-d-e-co
 
 - ✨ [Animate.css](https://animate.style) Para agregar animaciones simples y elegantes a componentes y alertas.
 
+- 🧩 [React-icons](https://www.npmjs.com/package/react-icons) Utilizado para incorporar íconos visuales fácilmente en los componentes de la app.
 
 👩‍💻 Desarrollado por Luisina Bender 🛡️⚔️  
 

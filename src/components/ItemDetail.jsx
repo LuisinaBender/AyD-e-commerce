@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 
 
 
+
+
 const ItemDetail = ({ detail }) => {
 
     const { addItem } = useContext(CartContext);

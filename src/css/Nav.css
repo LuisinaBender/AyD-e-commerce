@@ -6,7 +6,8 @@ justify-content: space-between;
 align-items: center;
 height: 60px;
 position: relative;
-z-index: 1001; 
+z-index: 1001;
+font-style: italic;
 }
 
 .navbar__logo {
@@ -87,6 +88,46 @@ cursor: pointer;
 .carWidget:hover {
     color: #553c26;
 }
+
+.navbar__frase {
+font-size: 18px;
+color: #fff8f0;
+font-style: italic;
+white-space: nowrap;
+}
+
+.navbar__buscador {
+padding: 6px 12px;
+border: none;
+border-radius: 20px;
+font-size: 16px;
+outline: none;
+background-color: #fff8f0;
+color: #553c26;
+width: 160px;
+transition: width 0.3s ease;
+}
+
+.navbar__buscador::placeholder {
+color: #b27c3e;
+}
+
+.navbar__buscador:focus {
+width: 200px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+.navbar__frase {
+    display: none;
+}
+
+.navbar__buscador {
+    width: 100%;
+    margin: 10px 0;
+}
+}
+
 
 /* Navbar general */
 @media (max-width: 768px) {

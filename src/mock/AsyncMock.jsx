@@ -1,16 +1,6 @@
-const products = [
-    {
-        id: '1',
-        name: 'Florero de yeso',
-        description: 'Frasco de yeso con un diseño elegante, ideal para decoración y almacenamiento.',
-        stock: 10,
-        price: 2500,
-        category: 'Yeso',
-        img: '/img/yeso1.jpg',
-    }, 
+export const products = [
     
     {
-        id: '2',
         name: 'Macetas',
         description: 'Ideal para suculentasy cactus, con un diseño moderno y elegante.',
         stock: 5,
@@ -21,7 +11,6 @@ const products = [
 
 
     {
-        id: '3',
         name: 'Hechizo de amor',
         description: 'Aroma de Vainilla con toques de canela y miel, ideal para atraer el amor y la pasión.',
         stock: 0,
@@ -31,7 +20,6 @@ const products = [
     },
 
     {
-        id: '4',
         name: 'Camino de mesa',
         description: 'Ideal para decorar tu hogar, con una tela suave y elegante.',
         stock: 20,
@@ -41,7 +29,6 @@ const products = [
     }, 
 
     {
-        id: '5',
         name: 'Jarrones ',
         description: 'Cojín de terciopelo con un diseño moderno y elegante, ideal para decorar tu hogar.',
         stock: 15,
@@ -51,7 +38,6 @@ const products = [
     }, 
 
     {
-        id: '6',
         name: 'Set de velas aromáticas',
         description: 'Set de 3 velas aromáticas con diferentes aromas, ideal para crear un ambiente relajante.',
         stock: 8,
@@ -61,7 +47,6 @@ const products = [
     },
 
     {
-        id: '7',
         name: 'Niña ',
         description: 'Jarrón de cerámica con un diseño moderno y elegante, ideal para decorar tu hogar.',
         stock: 12,
@@ -71,7 +56,6 @@ const products = [
     }, 
 
     {
-        id: '8',
         name: 'Cascada de Humo',
         description: 'Cascada de humo de cerámica con un diseño elegante, ideal para crear un ambiente relajante.',
         stock: 10,
@@ -80,7 +64,6 @@ const products = [
         img: '/img/yeso4.jpg',
     },
     {
-        id: '9',
         name: 'Porta Sahumerio',
         description: 'Porta sahumerio de yeso con un diseño moderno y elegante, ideal para decorar tu hogar.',
         stock: 7,
@@ -90,7 +73,6 @@ const products = [
     }, 
 
     {
-        id: '10',
         name: 'Set de aromatizadores',
         description: 'Set de 3 aromatizadores con diferentes aromas, ideal para crear un ambiente relajante.',
         stock: 5,
@@ -100,7 +82,6 @@ const products = [
     },
 
     {
-        id: '11',
         name: 'Perfume de ambiente',
         description: 'Aroma a Flores Blancas, ideal para perfumar tu hogar y crear un ambiente fresco y relajante.',
         stock: 6, 

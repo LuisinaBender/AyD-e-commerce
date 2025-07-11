@@ -1,0 +1,82 @@
+/* Contenedor principal del formulario */
+.checkout-container {
+max-width: 500px;
+margin: 2rem auto;
+padding: 2rem;
+background-color: #fffaf5;
+border-radius: 12px;
+border: 1px solid #d2a46d;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+.checkout-container h1 {
+text-align: center;
+color: #553c26;
+font-size: 1.5rem;
+margin-bottom: 1.5rem;
+}
+
+/* Estilo de inputs */
+.checkout-container input {
+width: 100%;
+padding: 10px 12px;
+margin-bottom: 12px;
+border: 1px solid #d2a46d;
+border-radius: 8px;
+font-size: 0.95rem;
+color: #553c26;
+background-color: #fff;
+box-sizing: border-box;
+}
+
+/* Mensajes de error */
+.checkout-container span {
+color: #d33;
+font-size: 0.85rem;
+display: block;
+margin-bottom: 8px;
+}
+
+/* Botón de envío */
+.checkout-container button {
+width: 100%;
+background-color: #b27c3e;
+color: white;
+padding: 12px;
+border: none;
+border-radius: 8px;
+font-size: 1rem;
+font-weight: bold;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.checkout-container button:hover {
+background-color: #553c26;
+}
+
+.checkout-container button:disabled {
+background-color: #ccc;
+cursor: not-allowed;
+}
+
+/* Confirmación de orden */
+.checkout-success {
+text-align: center;
+padding: 2rem;
+background-color: #f9f5f0;
+border-radius: 12px;
+border: 1px solid #d2a46d;
+box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.checkout-success h2 {
+color: #553c26;
+margin-bottom: 1rem;
+}
+
+.checkout-success p {
+color: #7a5a3a;
+font-size: 1rem;
+}

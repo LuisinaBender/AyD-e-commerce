@@ -1,12 +1,44 @@
-# React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# AyD-e-commerce 
 
-Currently, two official plugins are available:
+Este proyecto consiste en una tienda online dedicada a la venta de productos artesanales, como velas, figuras de yeso, caminos de mesa y otros artículos decorativos.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+![Logo](/src/assets/logo.png)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Installation 🚀
+
+Install my-project with npm
+
+1. 🔄 Clone el repositorio en su visual studio o su editor de codigo 
+2. 📁 Muevese a la carpeta creada con el comando `cd AyD-e-commerce`
+3. 📦 Ejecute el comando `npm install` para instalar las dependencias y crear la carpeta de node_modules
+4. 🌐 Ejecute el comnado `npm run dev` para levarntalo en el server local
+
+
+### Versión Host 🌍
+
+Si desea el proyecto online, puede ingresar al siguiente link [linkk]()
+
+### Librerias Utilizadas 📚
+
+- 🎨 [React Boostrap](https://react-bootstrap.netlify.app): Utilizadas para le styling de la app. 
+
+- 🔥 [Firebase](https://firebase.google.com/): Utilizado como base de datos.
+
+- 🧭 [React Router Dom](https://reactouter.com/): Utilizados para implentar la navegación por rutas.
+
+- 🎉 [SweetAlert2](sweetalert2.github.io) Utilizados para añadir estilos a las alertas.
+
+- ⚙️ [React hook form](https://react-hook-form.com) Utilizado para gestionar formularios
+
+- ✨ [Animate.css](https://animate.style) Para agregar animaciones simples y elegantes a componentes y alertas.
+
+
+👩‍💻 Desarrollado por Luisina Bender 🛡️⚔️  
+
+
+
+
+

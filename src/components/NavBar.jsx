@@ -9,7 +9,7 @@ const NavBar = () => {
 
     const handleSubmenuClick = () => {
         setMostrarMenu(false);
-        setMenuAbierto(false); // Opcional: cerrar menú móvil al seleccionar opción
+        setMenuAbierto(false); 
     };
 
     const toggleMenu = () => {

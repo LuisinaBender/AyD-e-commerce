@@ -6,6 +6,7 @@ import '../css/CartView.css';
 
 const CartView = () => {
   const { cart, clear, removeItem, cartTotal } = useContext(CartContext);
+  const allItemsHaveQuantity = cart.every(item => item.cantidad > 0);
 
   const preConfirmation = () => {
     Swal.fire({
@@ -19,8 +20,8 @@ const CartView = () => {
       cancelButtonText: 'Cancelar'
     }).then((result) => {
       if (result.isConfirmed) {
+        clear();
         Swal.fire(
-          clear(),
           '¡Eliminado!',
           'El producto ha sido eliminado de tu carrito.',
           'success'
@@ -31,34 +32,51 @@ const CartView = () => {
 
   return (
     <div className="cart-container">
-  <h2>Tu carrito 🛒</h2>
+      <h2>Tu carrito 🛒</h2>
 
-  <div>
-    {cart.length === 0 ? (
-      <p>Tu carrito está vacío.</p>
-    ) : (
-      cart.map((compra) => (
-        <div key={compra.id} className="cart-item">
-          <img src={compra.img} alt={compra.name} />
-          <span>{compra.name}</span>
-          <span>${compra.price}</span>
-          <span>Cantidad: {compra.cantidad}</span>
-          <span>Subtotal: ${compra.price * compra.cantidad}</span>
-          <button onClick={() => removeItem(compra.id)}>Eliminar</button>
-        </div>
-      ))
-    )}
-  </div>
+      <div>
+        {cart.length === 0 ? (
+          <p className="cart-empty-alert">Tu carrito está vacío.</p>
+        ) : (
+          cart.map((compra) => (
+            <div key={compra.id} className="cart-item">
+              <img src={compra.img} alt={compra.name} />
+              <span>{compra.name}</span>
+              <span>${compra.price}</span>
+              <span>Cantidad: {compra.cantidad}</span>
+              <span>Subtotal: ${compra.price * compra.cantidad}</span>
+              <button onClick={() => removeItem(compra.id)}>Eliminar</button>
+            </div>
+          ))
+        )}
+      </div>
 
-  <h3 className="cart-total">Total a pagar: ${cartTotal()},00</h3>
+      <h3 className="cart-total">Total a pagar: ${cartTotal()},00</h3>
 
-  <div className="cart-actions">
-    <button className="btn btn-danger" onClick={preConfirmation}>Vaciar carrito</button>
-    <Link className="btn btn-success" to="/checkout">Terminar Compra</Link>
-  </div>
-</div>
-
+      <div className="cart-actions">
+        <button className="btn btn-danger" onClick={preConfirmation}>Vaciar carrito</button>
+        
+        <Link 
+          className={`btn btn-success ${!allItemsHaveQuantity ? 'disabled' : ''}`} 
+          to={allItemsHaveQuantity ? '/checkout' : '#'}
+          onClick={e => {
+            if (!allItemsHaveQuantity) {
+              e.preventDefault();
+              Swal.fire({
+                icon: 'warning',
+                title: 'Agrega cantidad',
+                text: 'Por favor, agrega al menos una unidad a cada producto para continuar.',
+                confirmButtonColor: '#b27c3e'
+              });
+            }
+          }}
+        >
+          Terminar Compra
+        </Link>
+      </div>
+    </div>
   );
 };
 
-export default CartView
+export default CartView;
+

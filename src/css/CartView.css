@@ -112,6 +112,7 @@ border: none;
 background-color: #553c26;
 }
 
+
 /* --- Responsivo para móviles --- */
 @media (max-width: 600px) {
 .cart-item {

@@ -3,6 +3,7 @@ import { collection, serverTimestamp, addDoc } from 'firebase/firestore';
 import { useForm } from 'react-hook-form';
 import { CartContext } from '../context/CartContext';
 import { dataBase } from '../services/firebase';
+import '../styles/CheckoutHook.css';
 
 const CheckoutHook = () => {
     const [orderId, setOrderId] = useState('');

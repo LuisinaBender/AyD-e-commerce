@@ -1,39 +1,64 @@
 import React, { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
+import '../css/CartView.css'; 
 
 const CartView = () => {
   const { cart, clear, removeItem, cartTotal } = useContext(CartContext);
 
+  const preConfirmation = () => {
+    Swal.fire({
+      title: '¿Estás seguro de que quieres eliminar el producto?',
+      text: "¡No podrás deshacer esta acción!",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Sí, eliminar',
+      cancelButtonText: 'Cancelar'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire(
+          clear(),
+          '¡Eliminado!',
+          'El producto ha sido eliminado de tu carrito.',
+          'success'
+        );
+      }
+    });
+  };
+
   return (
-    <div>
-      <h2>Tu carrito 🛒</h2>
+    <div className="cart-container">
+  <h2>Tu carrito 🛒</h2>
 
-      <div>
-        {cart.length === 0 ? (
-          <p>Tu carrito está vacío.</p>
-        ) : (
-          cart.map((compra) => (
-            <div key={compra.id} className="cart-item" style={{ display: 'flex', gap: '1rem', alignItems: 'center' }}>
-              <img src={compra.img} alt={compra.name} style={{ width: '10rem' }} />
-              <span>{compra.name}</span>
-              <span>${compra.price}</span>
-              <span>Cantidad: {compra.cantidad}</span>
-              <span>Subtotal: ${compra.price * compra.cantidad}</span>
-              <button onClick={() => removeItem(compra.id)}>Eliminar</button>
-            </div>
-          ))
-        )}
-      </div>
+  <div>
+    {cart.length === 0 ? (
+      <p>Tu carrito está vacío.</p>
+    ) : (
+      cart.map((compra) => (
+        <div key={compra.id} className="cart-item">
+          <img src={compra.img} alt={compra.name} />
+          <span>{compra.name}</span>
+          <span>${compra.price}</span>
+          <span>Cantidad: {compra.cantidad}</span>
+          <span>Subtotal: ${compra.price * compra.cantidad}</span>
+          <button onClick={() => removeItem(compra.id)}>Eliminar</button>
+        </div>
+      ))
+    )}
+  </div>
 
-      <h3>Total a pagar: ${cartTotal()},00</h3>
+  <h3 className="cart-total">Total a pagar: ${cartTotal()},00</h3>
 
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', width: '80%', padding: '2rem' }}>
-        <button className='btn btn-danger' onClick={clear}>Vaciar carrito</button>
-        <Link className='btn btn-success' to='/checkout'>Terminar Compra</Link>
-      </div>
-    </div>
+  <div className="cart-actions">
+    <button className="btn btn-danger" onClick={preConfirmation}>Vaciar carrito</button>
+    <Link className="btn btn-success" to="/checkout">Terminar Compra</Link>
+  </div>
+</div>
+
   );
 };
 
-export default CartView;
+export default CartView

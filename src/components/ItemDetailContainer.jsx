@@ -38,7 +38,6 @@ const ItemDetailContainer = () => {
     }
     return (
         <>
-            <button onClick={subirData}>Subir Productos</button>
         {cargando ? <LoaderComponent/> : <ItemDetail detail={detail}/>}
         </>
     )

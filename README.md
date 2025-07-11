@@ -31,6 +31,8 @@ Si desea el proyecto online, puede ingresar al siguiente link [linkk]()
 
 - 🎉 [SweetAlert2](sweetalert2.github.io) Utilizados para añadir estilos a las alertas.
 
+- ⚙️ [React hook form](https://react-hook-form.com) Utilizado para gestionar formularios
+
 
 👩‍💻 Desarrollado por Luisina Bender 🛡️⚔️  
 

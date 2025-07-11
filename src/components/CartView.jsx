@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Swal from 'sweetalert2';
 import '../css/CartView.css'; 
 
+
 const CartView = () => {
   const { cart, clear, removeItem, cartTotal } = useContext(CartContext);
   const allItemsHaveQuantity = cart.every(item => item.cantidad > 0);
@@ -57,7 +58,7 @@ const CartView = () => {
         <button className="btn btn-danger" onClick={preConfirmation}>Vaciar carrito</button>
         
         <Link 
-          className={`btn btn-success ${!allItemsHaveQuantity ? 'disabled' : ''}`} 
+          className={`btn btn-success ${!allItemsHaveQuantity ? 'disabled-link' : ''}`} 
           to={allItemsHaveQuantity ? '/checkout' : '#'}
           onClick={e => {
             if (!allItemsHaveQuantity) {
